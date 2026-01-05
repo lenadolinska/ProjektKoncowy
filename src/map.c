@@ -1,3 +1,5 @@
+// Obsługa wczytywania mapy, zwalniania pamięci mapy, pobierania wartości z danego punktu.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "map.h"
@@ -33,7 +35,7 @@ Map* load_map(const char* filename) {
     // Alokacja wierszy
     map->data = (double**)malloc(map->height * sizeof(double*));
     if (!map->data) {
-        fprintf(stderr, "Blad alokacji pamieci dla wskaźników wierszy\n");
+        fprintf(stderr, "Blad alokacji pamieci dla wskaznikow wierszy\n");
         free(map);
         fclose(file);
         return NULL;
